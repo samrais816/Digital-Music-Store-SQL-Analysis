@@ -53,3 +53,19 @@ Business Questions Addressed: Phase 2 (Moderate Set)
 ### Q3: Above-Average Track Runtime Analysis
 * **Insight:** Evaluated media content metrics via a subquery filter to separate standard commercial-length tracks from extended long-form audio assets.
 * **Key Syntax:** Subqueries (`SELECT AVG()`), `WHERE` filters.
+
+
+
+Business Questions Addressed: Phase 3 (Advanced Set)
+
+### Q1: Customer Spend Portfolio per Artist
+* **Insight:** Combined CTEs and complex relational joins to track the exact breakdown of transaction values showing exactly how much individual customers have spent on specific artists.
+* **Key Syntax:** Common Table Expressions (CTEs), Multi-joins, `SUM()`.
+
+### Q2: Most Popular Music Genre per Country
+* **Insight:** Calculated purchase counts per genre within individual nations, utilizing the `ROW_NUMBER()` window function to partition by country and isolate the absolute top-performing music styles.
+* **Key Syntax:** `ROW_NUMBER() OVER(PARTITION BY...)`, CTEs, `COUNT()`.
+
+### Q3: Top-Spending Customer per Country
+* **Insight:** Evaluated regional consumer behavior by identifying the single highest-paying customer in each country, using window partitioning to resolve potential multi-way ties perfectly.
+* **Key Syntax:** Window Functions, Multi-table `SUM()`, Data Partitioning.
