@@ -37,3 +37,19 @@ The database mirrors a production-level ecosystem structured across **11 interco
 ### Q5: Who is our highest-value customer?
 * **Insight:** Linked customer profiles directly to invoice data to highlight individual loyalty and highest spending metrics.
 * **Key Syntax Used:** `INNER JOIN`, `SUM()`, `GROUP BY`.
+
+
+
+Business Questions Addressed: Phase 2 (Moderate Set)
+
+### Q1: Rock Music Listener Directory
+* **Insight:** Navigated a 5-table relational chain (`customer` -> `invoice` -> `invoice_line` -> `track` -> `genre`) using standard multi-joins to build an email marketing list targeting active Rock listeners.
+* **Key Syntax:** `INNER JOIN`, `DISTINCT`, `WHERE`.
+
+### Q2: Top 10 Rock Artists by Volume
+* **Insight:** Aggregated track catalogs across artists and genres to identify which performers hold the highest market share of content within the music storefront.
+* **Key Syntax:** `INNER JOIN`, `COUNT()`, `GROUP BY`, `LIMIT 10`.
+
+### Q3: Above-Average Track Runtime Analysis
+* **Insight:** Evaluated media content metrics via a subquery filter to separate standard commercial-length tracks from extended long-form audio assets.
+* **Key Syntax:** Subqueries (`SELECT AVG()`), `WHERE` filters.
